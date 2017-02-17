@@ -10,13 +10,13 @@ Challenges for <a href="https://github.com/sf-wdi-24/modules/tree/master/week-11
 
 ## App Setup
 
-1. Whoever is going to be the "driver" first should fork this repo, and clone it into their `develop` folder on their local machine. The "navigator" must close their computer.
+1. Whoever is going to be the "driver" first should fork this repo, and clone it on their local machine. The "navigator" must close their computer.
 
 2. Once you're in your app directory, run `npm install` to install the required `node_modules`.
 
 3. In one Terminal window, run `mongod`, and in another, run `nodemon`.
 
-4. Navigate to `localhost:3000` in the browser. You should see an empty page and an angry red error message in the Chrome console.
+4. Navigate to `localhost:3000` in the browser. You should see a mostly empty page and an error message in the Chrome console.
 
 5. **BEFORE WRITING ANY CODE**, open up `models/user.js`, `resources/auth.js`, and `server.js`. The driver should go through these files in order and explain what you think each code block and/or function does.
 
@@ -28,7 +28,8 @@ Challenges for <a href="https://github.com/sf-wdi-24/modules/tree/master/week-11
   TOKEN_SECRET=yoursupersecrettoken
   ```
 
-  This is the secret your server will use to encode the JWT token for each user. Make sure to restart your Node server after this step.
+  This is the secret your server will use to encode the JWT token for each user. It is very important that secrets remain secret, so note that `.env` is already in the .gitignore file.  Make sure to restart your Node server after this step.
+
 
 8. Before hooking up the front-end, test your server routes via Postman:
   * Send a `GET` request to `/api/me`. You should see the message: "Please make sure your request has an Authorization header."
@@ -105,4 +106,4 @@ Challenges for <a href="https://github.com/sf-wdi-24/modules/tree/master/week-11
 
 3. On the user's profile page, display the number of posts the user has written. **Hint:** You'll need to add `.populate('posts')` to your `GET /api/me` route in `server.js`.
 
-4. On the user profile page, the "Joined" date isn't formatted very nicely. Use Angular's built-in <a href="https://docs.angularjs.org/api/ng/filter/date" target="_blank">date filter</a> to display the date in this format: `January 25, 2016`.
+4. On the user profile page, the "Joined" date isn't formatted very nicely. Use Angular's built-in <a href="https://docs.angularjs.org/api/ng/filter/date" target="_blank">date filter</a> to display the date in this format: `January 25, 2017`.
